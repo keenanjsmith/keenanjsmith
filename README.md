@@ -16,19 +16,15 @@
 - <b>🔍 Threat Analysis & Network Security</b>  
   - [Placeholder] Network Scanning & Enumeration (Nmap, Wireshark, Shodan)  
   - [Placeholder] Packet Analysis & Traffic Inspection  
-  - [Placeholder] Firewall Configuration & Intrusion Detection  
 
 - <b>🔑 System Hardening & Security Implementation</b>  
   - [Placeholder] Linux Security Hardening (File Permissions, Process Mgmt)  
   - [Placeholder] Secure Authentication & Access Controls  
-  - [Placeholder] Encrypting & Protecting Data (GPG, TLS/SSL)  
 
 - <b>🕵️ Penetration Testing & Ethical Hacking</b>  
   - [Placeholder] Exploiting Vulnerabilities (Metasploit, Nessus)  
-  - [Placeholder] Password Cracking & Privilege Escalation  
-  - [Placeholder] Web Application Security (SQL Injection, XSS)  
+  - [Placeholder] Password Cracking & Privilege Escalation    
 
 - <b>🏛️ Security Operations & Incident Response</b>  
   - [Placeholder] Log Analysis & SIEM (Splunk, ELK Stack)  
   - [Placeholder] Incident Detection & Response Strategies  
-  - [Placeholder] Malware Analysis & Digital Forensics  
