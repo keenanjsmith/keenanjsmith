@@ -1,30 +1,27 @@
-<h1>Hi there, I'm Keenan, an <a href="https://www.linkedin.com/in/connect-with-keenan">IT Professional</a>👨🏽‍💻</h1>
+<h1>Hi there, I'm Keenan, an <a href="https://www.linkedin.com/in/connect-with-keenan">IAM Engineer</a>👨🏽‍💻</h1>
 
-<h2>📂 Information Technology Projects:</h2>
+I provide expertise in Identity and Access Management and cloud security. My goal is simple: build reliable identity systems that help people get work done safely.
 
-- <b>osTicket (Help Desk Ticketing System)</b>  
-  - [osTicket: Prerequisites and Installation](https://github.com/keenanjsmith/osticket-prereqs)  
-  - [osTicket: Post-Installation Configuration](https://github.com/keenanjsmith/post-install-config)  
-  - [osTicket: Ticket Lifecycle Examples](https://github.com/keenanjsmith/ticket-lifecycle)  
+## ☁️ Portfolio by Cloud Provider
 
-- <b>Microsoft Azure</b>  
-  - [Configuring On-premises Active Directory within Azure VMs](https://github.com/keenanjsmith/configure-ad)  
-  - [Network Security Groups (NSGs) and Inspecting Network Protocols](https://github.com/keenanjsmith/azure-network-protocols)  
+### 🔵 Microsoft Azure
 
-<h2>🛡️ Cybersecurity Projects:</h2>
+#### 🪪 Microsoft Entra ID
+- **[Azure IAM Lab](https://github.com/keenanjsmith/azure-iam-lab)** ✅  
+  Hands-on, end-to-end lab that shows how I built an Azure tenant and applied real identity controls.
 
-- <b>🔍 Threat Analysis & Network Security</b>  
-  - [Placeholder] Network Scanning & Enumeration (Nmap, Wireshark, Shodan)  
-  - [Placeholder] Packet Analysis & Traffic Inspection  
+  **Includes**
+  - Azure Environment setup (resource group, VNet, VMs)  
+  - Active Directory configuration (OUs, domain join, admin accounts)  
+  - Security controls with Conditional Access and Identity Protection  
 
-- <b>🔑 System Hardening & Security Implementation</b>  
-  - [Placeholder] Linux Security Hardening (File Permissions, Process Mgmt)  
-  - [Placeholder] Secure Authentication & Access Controls  
+  **Highlights**
+  - Step-by-step documentation with screenshots  
+  - Cloud-only approach (no hybrid setup)  
+  - Beginner-friendly  
 
-- <b>🕵️ Penetration Testing & Ethical Hacking</b>  
-  - [Placeholder] Exploiting Vulnerabilities (Metasploit, Nessus)  
-  - [Placeholder] Password Cracking & Privilege Escalation    
-
-- <b>🏛️ Security Operations & Incident Response</b>  
-  - [Placeholder] Log Analysis & SIEM (Splunk, ELK Stack)  
-  - [Placeholder] Incident Detection & Response Strategies  
+  **🔧 Skills and Tools**
+  - Azure Portal  
+  - Microsoft Entra ID  
+  - Conditional Access & Identity Protection
+  - Windows Server & Windows 10/11
