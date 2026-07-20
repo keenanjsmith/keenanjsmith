@@ -1,4 +1,4 @@
-<h1>Hi there, I'm Keenan, an <a href="https://www.linkedin.com/in/connect-with-keenan">IAM Engineer</a>👨🏽‍💻</h1>
+<h1>Hi there, I'm Keenan, an aspiring<a href="https://www.linkedin.com/in/connect-with-keenan">IAM Engineer</a>👨🏽‍💻</h1>
 
 I provide expertise in Identity and Access Management and cloud security. My goal is simple: build reliable identity systems that help people get work done safely.
 
