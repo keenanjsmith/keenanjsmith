@@ -1,93 +1,74 @@
-# Hi, I'm Keenan 👋
+# Keenan Smith
 
-I'm building toward identity and access management, with privileged access as the target.
+Air Force veteran working in IT support and building toward identity and access management
+engineering. San Antonio, TX.
 
-I came to this from help desk. Years of supporting Apple and Windows fleets, working tickets,
-and doing remote support through BeyondTrust, which is a privileged access product even if
-nobody called it that at the time. Identity was the layer underneath every problem I touched,
-so I decided to go learn it properly instead of working around it.
-
-Everything below is built by hand and documented. When something breaks, I write down what
-broke and what fixed it, because that is the part every tutorial leaves out.
+I build infrastructure labs on real hardware, document what breaks, and publish the runbook along
+with the failures. The build logs are the point. Anyone can follow a tutorial that works. What is
+worth writing down is what happens when it doesn't.
 
 ---
 
-## 🔐 Identity projects
+## Projects
 
-### On-premises
+### [active-directory-project](https://github.com/keenanjsmith/active-directory-project)
+A Windows Server 2022 domain built from scratch on VirtualBox: AD DS, DNS, DHCP, NAT routing, and
+1000 bulk-provisioned users. Four extension labs on top of the core build.
 
-**[active-directory-project](https://github.com/keenanjsmith/active-directory-project)**
+| Lab | What it covers |
+| --- | --- |
+| DNS records and the resolver cache | A records, CNAMEs, cache staleness, and why flushing DNS does not fix a hosts file entry |
+| File shares and NTFS permissions | Share versus NTFS, tested as an actual standard user rather than assumed |
+| Account lockout and password management | Group Policy lockout, unlock, reset, disable, and the event IDs each one produces |
+| Network traffic and Windows Firewall | Five protocols captured live in Wireshark, plus a firewall rule to break one on purpose |
 
-A working Windows Server 2022 domain built from scratch in VirtualBox. Domain controller
-running AD DS, DNS, DHCP, and RRAS/NAT, roughly 1000 provisioned user accounts, and a Windows
-11 Enterprise client that joins the domain and authenticates against it.
+Findings include a domain controller that audits the administrator unlocking an account but not the
+failed passwords that locked it, and an account lockout GPO that silently does nothing when linked
+to an OU instead of the domain root.
 
-- Full runbook with 25 verification screenshots
-- Build log of all 14 things that broke, with exact error text and fixes
-- Honest write-up of the shortcuts the lab takes and why they would fail in production
-- Built on Server 2022, Windows 11, and VirtualBox 7, where most guides for this stop at 2019
+### [osticket-lab](https://github.com/keenanjsmith/osticket-lab)
+A help desk ticketing system built from nothing: IIS with CGI, PHP 7.3, MySQL 5.5, and osTicket on
+top. Four layers, each configured by hand, then hardened afterward.
 
-Built on Josh Madakor's Active Directory tutorial and carried forward from there.
+Includes the security step most walkthroughs treat as housekeeping, and 37 minutes lost to Windows
+Explorer silently dropping three folders from a zip archive.
 
-### Cloud
+### [azure-iam-lab](https://github.com/keenanjsmith/azure-iam-lab)
+An identity and access management lab in Azure Entra ID: users, groups, role assignments with least
+privilege, device join, Identity Protection, and Conditional Access baseline policies.
 
-**[azure-iam-lab](https://github.com/keenanjsmith/azure-iam-lab)**
-
-End-to-end Azure tenant build with real identity controls applied.
-
-- Resource group, VNet, and VM setup
-- Microsoft Entra ID configuration, OUs, domain join, and admin accounts
-- Conditional Access and Identity Protection
-- Step-by-step documentation with screenshots, written for beginners
-
----
-
-## 🛠️ Tools I've built
-
-**[cert-quiz-bot](https://github.com/keenanjsmith/cert-quiz-bot)**
-
-A Discord bot that runs daily CompTIA A+ Core 2 practice questions for my cohort. Python,
-discord.py, and SQLite, with a question bank weighted to the real exam domain percentages,
-user stat tracking, and a leaderboard.
-
-Built it because my classmates needed it, and about forty people use it.
+### [cert-quiz-bot](https://github.com/keenanjsmith/cert-quiz-bot)
+A Discord bot that posts a daily CompTIA A+ Core 2 question to my cohort's study server. Python,
+SQLite, discord.py. Question bank weighted to the real domain percentages, with a two-pass
+no-repeat picker and per-user progress tracking.
 
 ---
 
-## 🚧 In progress
+## Certifications
 
-- **Extension labs** on the same domain: Group Policy, NTFS versus share permissions, account
-  lockout policy, Windows Firewall rules
-- **osTicket build** — the help desk half of the story
-- **CyberArk PAM lab** — Conjur OSS vault with credential rotation, plus Apache Guacamole as a
-  session-recording bastion. Enterprise-grade privileged access on free open source components,
-  no license required.
+- CompTIA Security+
+- CompTIA A+ Core 1 (July 2026)
+- CompTIA A+ Core 2, targeted September 2026
 
----
-
-## 📜 Certifications
-
-| | |
-|---|---|
-| CompTIA Security+ | Earned |
-| CompTIA A+ Core 1 (220-1201) | Passed |
-| CompTIA A+ Core 2 (220-1202) | In progress |
-
-Currently enrolled in an IT Systems Administration program.
+Currently enrolled in the IT Systems Administration program at MyComputerCareer.
 
 ---
 
-## 🤖 On AI
+## On AI
 
-I use AI as a working partner and I say so in every repo, with a table breaking down exactly
-which parts it touched. The building, the troubleshooting, and the verification are mine. The
-documentation is collaborative.
+The documentation in these repositories is drafted with AI assistance and I say so in every repo.
+Every step was executed on real infrastructure, every screenshot is from my own build, and every
+problem in the build logs is one I actually hit.
 
-I think how someone uses these tools says more than whether they use them, and hiding it would
-be the wrong call.
+Using the tooling well and being straightforward about it is more useful than pretending otherwise.
 
 ---
 
-## 📫 Reach me
+## Coming next
+
+Post-install configuration and ticket lifecycle labs on osTicket, then a CyberArk privileged access
+management lab using Conjur OSS and Apache Guacamole.
+
+---
 
 [LinkedIn](https://www.linkedin.com/in/connect-with-keenan)
