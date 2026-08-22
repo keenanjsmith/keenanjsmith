@@ -30,6 +30,12 @@ to an OU instead of the domain root.
 A help desk ticketing system built from nothing: IIS with CGI, PHP 7.3, MySQL 5.5, and osTicket on
 top. Four layers, each configured by hand, then hardened afterward.
 
+Two labs on top of the install. Lab 01 builds the org structure (roles, departments, teams, agents,
+SLA plans, help topics) and Lab 02 works three tickets end to end through assignment, escalation,
+and closure. Findings include a View-only role that can still post internal notes because no
+permission governs notes at all, and department access that cascades downward through the path
+field so a nested department silently grants visibility to the parent's agents.
+
 Includes the security step most walkthroughs treat as housekeeping, and 37 minutes lost to Windows
 Explorer silently dropping three folders from a zip archive.
 
@@ -38,17 +44,16 @@ An identity and access management lab in Azure Entra ID: users, groups, role ass
 privilege, device join, Identity Protection, and Conditional Access baseline policies.
 
 ### [cert-quiz-bot](https://github.com/keenanjsmith/cert-quiz-bot)
-A Discord bot that posts a daily CompTIA A+ Core 2 question to my cohort's study server. Python,
-SQLite, discord.py. Question bank weighted to the real domain percentages, with a two-pass
-no-repeat picker and per-user progress tracking.
+A Discord bot that posts a daily certification question to my cohort's study server. Python,
+SQLite, discord.py. Dual-track question banks weighted to each exam's real domain percentages,
+answer positions shuffled at post time, no-repeat logic per track, and per-user progress tracking.
 
 ---
 
 ## Certifications
 
+- CompTIA A+ (Core 1 July 2026, Core 2 August 2026)
 - CompTIA Security+
-- CompTIA A+ Core 1 (July 2026)
-- CompTIA A+ Core 2, targeted September 2026
 
 Currently enrolled in the IT Systems Administration program at MyComputerCareer.
 
@@ -66,8 +71,10 @@ Using the tooling well and being straightforward about it is more useful than pr
 
 ## Coming next
 
-Post-install configuration and ticket lifecycle labs on osTicket, then a CyberArk privileged access
-management lab using Conjur OSS and Apache Guacamole.
+A privileged access management lab built out of free components: Conjur OSS as the vault with
+scripted credential retrieval and rotation, and Apache Guacamole as a session proxy that records
+every SSH and RDP session to isolated targets. After that, an identity-aware access proxy lab
+using Teleport.
 
 ---
 
