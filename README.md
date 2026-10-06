@@ -34,6 +34,22 @@ Conjur OSS where the Digital Vault goes, Apache Guacamole where PSM goes. Not Cy
 binaries sit behind a customer portal. The same architecture from components that behave the same
 way mechanically.
 
+**[teleport-access-lab](https://github.com/keenanjsmith/teleport-access-lab)**
+
+The other side of PAM. Where the vault lab stores and rotates standing credentials, this one gets
+rid of them. Teleport Community Edition in front of three Linux servers and a PostgreSQL database,
+where every login needs MFA, every pass is a short-lived certificate, and every session is recorded.
+
+- Least privilege as code. A developer role scoped by label to dev servers and one non-admin
+  Linux account, which can't even see prod or the database
+- Servers join through outbound reverse tunnels, so every firewall denies all incoming traffic and
+  access still works
+- Sessions played back from the audit side, and the exact SQL query captured with who ran it and
+  as which database user
+- PostgreSQL that only accepts Teleport-signed certificates, reached through a read-only user
+- Four runbooks written for someone who has never used Linux, a build log of nine problems with
+  fixes, and a lab shortcuts section naming ten
+
 ---
 
 ## 🗂️ Identity and directory services
@@ -86,7 +102,6 @@ Built it because my classmates needed it, and about forty people use it.
 
 ## 🚧 Next
 
-- **Teleport lab.** Identity-aware proxy, short-lived certificates, RBAC, and session recording
 - **Azure and Terraform series.** Cost management, secure network infrastructure, and Entra ID
   access governance, all as code
 
@@ -99,6 +114,8 @@ Built it because my classmates needed it, and about forty people use it.
 | CompTIA Security+ | Earned |
 | CompTIA A+ Core 1 (220-1201) | July 2026 |
 | CompTIA A+ Core 2 (220-1202) | August 2026 |
+| Microsoft Azure Fundamentals (AZ-900) | September 2026 |
+| Microsoft Azure AI Fundamentals (AI-901) | September 2026 |
 
 Currently enrolled in an IT Systems Administration program.
 
